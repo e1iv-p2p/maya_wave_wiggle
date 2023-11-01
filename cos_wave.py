@@ -5,7 +5,11 @@ import pymel.core as pm
 import maya.cmds as cmds
 import maya.mel as mel
 import maya.OpenMayaUI as omui
-
+try:    # noinspection PyUnresolvedReferences,PyUnboundLocalVariable
+    long
+except NameError:   # Python 3 compatibility
+    long = int
+    unicode = str
 
 Wgt_instance = None
 
